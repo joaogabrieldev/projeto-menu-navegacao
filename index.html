@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projeto - Menu</title>
+    <style>
+        body {
+            background-color: steelblue;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .container {
+            /* background-color: white; */
+        }
+
+        .btn-menu {
+            background: transparent;
+            border: transparent;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            cursor: pointer;
+
+            width: 30px;
+            height: 28px;
+
+            
+        }
+
+        .linha {
+            display: block;
+            
+            border: 1px solid black;
+            background-color: black;
+
+            width: 100%;
+            height: 4px;
+
+            border-radius: 8px;
+
+
+            
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Menu Personalizado</h1>
+    </header>
+    <main>
+        <div class="container">
+            <button class="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+        </div>
+    </main>
 </body>
+
 </html>
