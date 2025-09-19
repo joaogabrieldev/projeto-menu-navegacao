@@ -1,97 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto - Menu</title>
-    <style>
-        body {
-            background-color: steelblue;
-            color: white;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-        }
-
-        .container {
-            /* background-color: white; */
-        }
-
-        .btn-menu {
-            background: transparent;
-            border: transparent;
-            padding: 0;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-
-            cursor: pointer;
-
-            width: 30px;
-            height: 28px;
-
-        }
-
-        .linha {
-            display: block;
-
-            border: 1px solid black;
-            background-color: black;
-
-            width: 100%;
-            height: 4px;
-
-            border-radius: 8px;
-            transition: all 0.2s cubic-bezier(0.26, 0.65, 0.42, 0.86)
-        }
-
-        .btn-menu.ativo .linha:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 7px);
-            transition: all 0.2s cubic-bezier(0.26, 0.65, 0.42, 0.86)
-        }
-
-        .btn-menu.ativo .linha:nth-child(2) {
-            opacity: 0;
-            transition: all 0.2s cubic-bezier(0.26, 0.65, 0.42, 0.86)
-        }
-
-        .btn-menu.ativo .linha:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -8px);
-            transition: all 0.2s cubic-bezier(0.26, 0.65, 0.42, 0.86)
-        }
-    </style>
+    <link rel="stylesheet" href="./src/styles/index.css">
 </head>
-
 <body>
     <header>
         <h1>Menu Personalizado</h1>
     </header>
     <main>
         <div class="container">
-            <button class="btn-menu ativo">
-                <span class="linha"></span>
-                <span class="linha"></span>
-                <span class="linha"></span>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Serviços</a></li>
+            <div class="div-btn-menu">
+                <button class="btn-menu">
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                </button>
+            </div>
+            <nav class="nav-container">
+                <ul class="ul-nav">
+                    <li class="li-nav"><a href="#">Produtos</a></li>
+                    <li class="li-nav"><a href="#">Sobre</a></li>
+                    <li class="li-nav"><a href="#">Contato</a></li>
+                    <li class="li-nav"><a href="#">Serviços</a></li>
                 </ul>
             </nav>
         </div>
     </main>
-    <script>
-        const btnMenu = document.querySelector(".btn-menu")
-
-        btnMenu.addEventListener("click", () => {
-            btnMenu.classList.toggle("ativo")
-        })
-
-
-    </script>
+    <script src="./src/scripts/index.js"></script>
 </body>
-
 </html>
