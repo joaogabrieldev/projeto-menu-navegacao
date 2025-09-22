@@ -17,3 +17,5 @@ navLinks.forEach((item) => {
     event.currentTarget.classList.add("item-ativo");
   });
 });
+
+
